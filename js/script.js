@@ -18,7 +18,7 @@ subDurationElement.addEventListener("change", function (e) {
 
 var updateSubscriptionDiv = function () {
     var monthlyCost = 5; //basic plan
-    if (subType === "standart") {
+    if (subType === "standard") {
         monthlyCost = 7;
     } else if (subType === "premium") {
         monthlyCost = 10;
