@@ -15,3 +15,14 @@ subDurationElement.addEventListener("change", function (e) {
     // console.log(subDuration);
     updateSubscriptionDiv();
 });
+
+var updateSubscriptionDiv = function () {
+    var monthlyCost = 5; //basic plan
+    if (subType === "standart") {
+        monthlyCost = 7;
+    } else if (subType === "premium") {
+        monthlyCost = 10;
+    }
+    var total = subDuration * monthlyCost;
+    result.innerText = `You have chosen a ${subDuration} month ${subType} plant for $${total}.`;
+};
